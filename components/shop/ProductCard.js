@@ -1,6 +1,6 @@
 export default function ProductCard({ name, price, category, imageurl, isNew }) {
   return (
-    <div className="group bg-bg border border-border rounded-3xl p-2 transition-all hover:shadow-xl hover:-translate-y-1 max-w-[300px] w-full mx-auto relative">
+    <div className="group bg-bg border border-border rounded-3xl p-2 transition-all hover:shadow-xl hover:-translate-y-1 max-w-[280px] w-full mx-auto relative">
       <div className="aspect-square bg-surface rounded-2xl relative overflow-hidden">
         {imageurl && (
           <img 
@@ -30,10 +30,16 @@ export default function ProductCard({ name, price, category, imageurl, isNew }) 
       </div>
 
       <div className="p-4">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="font-bold text-text-main text-lg leading-tight">{name}</h3>
-          <span className="font-mono font-bold text-secondary text-sm">${price}</span>
+        {/* Wrap title and price in a fixed-height container */}
+        <div className="flex justify-between items-start mb-4 h-[56px]"> 
+          <h3 className="font-bold text-text-main text-lg leading-tight line-clamp-2 flex-1 pr-2">
+            {name}
+          </h3>
+          <span className="font-mono font-bold text-secondary text-sm shrink-0">
+            ${price}
+          </span>
         </div>
+        
         <button className="w-full py-2.5 rounded-xl border border-text-main text-text-main font-bold text-sm hover:bg-text-main hover:text-white transition-all">
           Add to Cart
         </button>
