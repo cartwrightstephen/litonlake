@@ -1,9 +1,10 @@
-import { Geist, Geist_Mono } from "next/font/google"; // Updated for 2026
+import { Geist, Geist_Mono, Roboto } from "next/font/google"; // Updated for 2026
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap"
 });
 
 export default function RootLayout({ children }) {

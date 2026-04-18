@@ -1,73 +1,67 @@
 import Link from 'next/link';
+import FireIcon from '@/components/icons/FireIcon';
 
 export default function Footer() {
   return (
-    <footer className="bg-bg border-t border-border pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-bg border-t border-border pt-16 pb-8">
+      <div className="max-w-6xl mx-auto px-6">
         
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-16">
+        {/* Main Footer Content */}
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 pb-12">
           
-          {/* Column 1: Brand & Ethos */}
-          <div className="flex flex-col items-start">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6 bg-brand rounded flex items-center justify-center text-white font-bold text-[10px]">
-                L
+          {/* Left: Brand Section */}
+          <div className="flex flex-col items-start space-y-4">
+            <Link href="/" className="flex flex-col leading-none group">
+              <div className="flex items-end">
+                <span className="text-[15px] font-black tracking-tighter text-text-main uppercase">L</span>
+                <div className="relative flex flex-col items-center px-[0.5px] -mx-[1px]">
+                  <FireIcon className="w-3 h-3 text-brand mb-[-1px] relative z-10" />
+                  <div className="w-[2.5px] h-[7px] bg-text-main rounded-sm mb-[2px]"></div>
+                </div>
+                <span className="text-[15px] font-black tracking-tighter text-text-main uppercase">T</span>
+                <span className="ml-2 text-[15px] font-black tracking-[0.12em] text-text-main/80 uppercase">ON LAKE</span>
               </div>
-              <span className="text-xs font-black tracking-[0.2em] text-text-main uppercase">
-                LIT ON LAKE
+              <span className="text-[8px] font-bold text-brand tracking-[0.4em] uppercase opacity-70 mt-1">
+                Hand Perfected
               </span>
-            </div>
-            <p className="text-text-muted text-[13px] leading-relaxed max-w-[240px]">
-              Cultivating excellence. Delivering the finest local harvest with unmatched professionalism.
+            </Link>
+            <p className="text-text-muted text-[12px] leading-relaxed max-w-[260px]">
+              Rooted in Rochester soil. Providing hand-perfected craft cannabis for our local community and wholesale partners.
             </p>
           </div>
 
-          {/* Column 2: Navigation Groups */}
-          <div className="grid grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-widest text-text-main mb-5">Shop</h4>
-              <ul className="flex flex-col gap-3 text-[13px] font-medium text-text-muted">
-                <li><Link href="/menu" className="hover:text-brand transition">The Menu</Link></li>
-                <li><Link href="/delivery" className="hover:text-brand transition">Delivery Area</Link></li>
-                <li><Link href="/retail" className="hover:text-secondary transition text-secondary/80">Retail Portal</Link></li>
+          {/* Right: Navigation Links */}
+          <div className="grid grid-cols-2 gap-12 md:gap-24">
+            <div className="flex flex-col space-y-4">
+              <h4 className="text-[9px] font-bold uppercase tracking-[0.2em] text-text-main">Explore</h4>
+              <ul className="flex flex-col space-y-2 text-[12px] font-medium text-text-muted">
+                <li><Link href="/menu" className="hover:text-brand transition-colors">The Menu</Link></li>
+                <li><Link href="/wholesale" className="hover:text-secondary transition-colors font-bold text-secondary">Wholesale</Link></li>
+                <li><Link href="/visit" className="hover:text-brand transition-colors">Visit Store</Link></li>
               </ul>
             </div>
-            <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-widest text-text-main mb-5">Support</h4>
-              <ul className="flex flex-col gap-3 text-[13px] font-medium text-text-muted">
-                <li><Link href="/faq" className="hover:text-brand transition">FAQ</Link></li>
-                <li><Link href="/compliance" className="hover:text-brand transition">Compliance</Link></li>
-                <li><Link href="/contact" className="hover:text-brand transition">Contact</Link></li>
+            <div className="flex flex-col space-y-4">
+              <h4 className="text-[9px] font-bold uppercase tracking-[0.2em] text-text-main">Support</h4>
+              <ul className="flex flex-col space-y-2 text-[12px] font-medium text-text-muted">
+                <li><Link href="/faq" className="hover:text-brand transition-colors">FAQ</Link></li>
+                <li><Link href="/compliance" className="hover:text-brand transition-colors">Compliance</Link></li>
+                <li><Link href="/contact" className="hover:text-brand transition-colors">Contact</Link></li>
               </ul>
             </div>
           </div>
-
-          {/* Column 3: The "Notice" - Compliance is key for your sector */}
-          <div className="bg-surface p-6 rounded-2xl border border-border">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest text-brand mb-2 flex items-center gap-2">
-              <span className="w-1 h-1 rounded-full bg-brand"></span>
-              Verification Required
-            </h4>
-            <p className="text-[11px] text-text-muted leading-relaxed font-medium">
-              Must be 21+ with valid ID for all orders. We operate in strict accordance with local and state regulations.
-            </p>
-          </div>
-
         </div>
 
-        {/* Bottom Bar: Clean & Minimalist */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest">
-            © 2026 LIT ON LAKE
+        {/* Bottom Bar: Perfectly Lined Up */}
+        <div className="pt-6 border-t border-border/60 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[9px] font-bold text-text-muted/60 uppercase tracking-[0.2em]">
+            © 2026 LIT ON LAKE — ROCHESTER, NY
           </p>
-          
-          <div className="flex gap-8">
-            <Link href="/privacy" className="text-[10px] font-bold text-text-muted uppercase tracking-widest hover:text-text-main transition">
-              Privacy Policy
+          <div className="flex gap-6">
+            <Link href="/privacy" className="text-[9px] font-bold text-text-muted/60 uppercase tracking-[0.2em] hover:text-text-main transition-colors">
+              Privacy
             </Link>
-            <Link href="/terms" className="text-[10px] font-bold text-text-muted uppercase tracking-widest hover:text-text-main transition">
-              Terms of Service
+            <Link href="/terms" className="text-[9px] font-bold text-text-muted/60 uppercase tracking-[0.2em] hover:text-text-main transition-colors">
+              Terms
             </Link>
           </div>
         </div>
