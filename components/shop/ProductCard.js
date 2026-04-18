@@ -11,7 +11,7 @@ export default function ProductCard({ name, price, category, imageurl, isNew, de
     
     {/* Icons: Solid colors, no glow */}
     <div className="flex gap-0.5 items-center justify-center">
-      {[...Array(5)].map((_, i) => {
+      {[...Array(value)].map((_, i) => {
         const isActive = i < value;
         return (
           <FireIcon 
