@@ -20,7 +20,7 @@
 }
 
 @layer components {
-  /* Update your class to use this font stack */
+  /* Font stacks */
   .brand-tag {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     @apply px-1 py-0.5 
