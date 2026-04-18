@@ -74,6 +74,10 @@ export default async function ProductPage({ params }) {
           <h1 className="text-2xl md:text-4xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">
             {product.name}
           </h1>
+
+          <p className="w-fit my-2 px-3 py-1.5 rounded-md border border-secondary/20 bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.2em]">
+            ${product.price.toFixed(2)} Per Eighth
+          </p>
           
           <p className="text-text-muted text-sm md:text-lg leading-relaxed mb-8">
             {product.description}
@@ -87,7 +91,7 @@ export default async function ProductPage({ params }) {
           </div>
 
           <div className="flex gap-4">
-            <Link href="/visit" className="bg-text-main text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-brand transition-all shadow-lg shadow-brand/10">
+            <Link href="/visit" className="bg-brand text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-brand transition-all shadow-lg shadow-brand/10">
               Find at Store
             </Link>
           </div>

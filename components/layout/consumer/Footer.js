@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import FireIcon from '@/components/icons/FireIcon';
+import BrandLogo from '@/components/ui/BrandLogo';
 
 export default function Footer() {
   return (
@@ -12,15 +13,8 @@ export default function Footer() {
           {/* Left: Brand Section */}
           <div className="flex flex-col items-start space-y-4">
             <Link href="/" className="flex flex-col leading-none group">
-              <div className="flex items-end">
-                <span className="text-[15px] font-black tracking-tighter text-text-main uppercase">L</span>
-                <div className="relative flex flex-col items-center px-[0.5px] -mx-[1px]">
-                  <FireIcon className="w-3 h-3 text-brand mb-[-1px] relative z-10" />
-                  <div className="w-[2.5px] h-[7px] bg-text-main rounded-sm mb-[2px]"></div>
-                </div>
-                <span className="text-[15px] font-black tracking-tighter text-text-main uppercase">T</span>
-                <span className="ml-2 text-[15px] font-black tracking-[0.12em] text-text-main/80 uppercase">ON LAKE</span>
-              </div>
+              <BrandLogo />
+              {/* Sub-tag anchored to the right side of the main text */}
               <span className="text-[8px] font-bold text-brand tracking-[0.4em] uppercase opacity-70 mt-1">
                 Hand Perfected
               </span>

@@ -34,7 +34,7 @@ export default function Navbar() {
           <Link href="/wholesale" className="px-4 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-text-muted hover:text-brand hover:bg-brand/5 transition-all border border-transparent hover:border-brand/20">
             Wholesale
           </Link>
-          <Link href="/visit" className="ml-2 px-5 py-2 rounded-xl bg-text-main text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand transition-all">
+          <Link href="/visit" className="ml-2 px-5 py-2 rounded-xl bg-brand text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand/90 transition-all">
             Find Us
           </Link>
         </div>
