@@ -71,15 +71,21 @@ export default async function ProductPage({ params }) {
             </span>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">
-            {product.name}
-          </h1>
+          {/* Container: Flex wrap ensures it handles long product names on mobile */}
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <h1 className="text-3xl md:text-5xl font-black text-text-main tracking-tighter leading-tight">
+              {product.name}
+            </h1>
+            
+            {/* The Badge: Subtle, small, and right next to the title */}
+            <div className="flex items-baseline gap-1 px-2 py-0.5 rounded border text-sm md:text-base border-secondary/20 bg-secondary/5">
+              <span className="font-mono font-semibold text-secondary tabular-nums">
+                ${product.price.toFixed(2)} per 1/8 oz
+              </span>
+            </div>
+          </div>
 
-          <p className="w-fit my-1 px-3 py-1.5 rounded-md border border-brand/20 bg-brand/10 text-brand text-xs md:text-base font-black font-mono uppercase tracking-[0.1em]">
-            ${product.price.toFixed(2)} Per Eighth
-          </p>
-          
-          <p className="text-text-muted text-sm md:text-lg leading-relaxed mt-1 mb-8">
+          <p className="text-text-muted text-sm md:text-lg leading-relaxed mb-8">
             {product.description}
           </p>
 
