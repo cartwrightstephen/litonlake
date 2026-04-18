@@ -1,56 +1,9 @@
 import ProductCard from '@/components/shop/ProductCard';
 import Link from 'next/link';
 import { Sparkles } from 'lucide-react';
+import { products } from '@/data/products';
 
 export default function Home() {
-  const products = [
-    { 
-      id: 1, 
-      name: "Lake Blue Dream", 
-      price: 45, 
-      category: "Sativa Hybrid",
-      description: "A longtime bestseller; cross of Blueberry and Haze. Offers balanced uplifting cerebral effects with mild body relaxation.",
-      isNew: true,
-      stats: { thc: 4, flavor: 5, chill: 3 },
-      imageurl: "https://images.unsplash.com/photo-1612995923001-27d03779d023?auto=format&fit=crop&q=80&w=800" 
-    },
-    { 
-      id: 2, 
-      name: "Lakeside Gelato", 
-      price: 50, 
-      category: "Hybrid", 
-      description: "Creamy dessert strain from Sunset Sherbet and Thin Mint GSC. Sweet berry, citrus, and mint notes with potent euphoric yet calming effects.",
-      stats: { thc: 5, flavor: 5, chill: 4 },
-      imageurl: "https://images.unsplash.com/photo-1457573557536-6b4b6ca9a05e?auto=format&fit=crop&q=80&w=800" 
-    },
-    { 
-      id: 3, 
-      name: "Wedding Cake", 
-      price: 45, 
-      category: "Indica Hybrid", 
-      description: "Also called Pink Cookies; cross of Cherry Pie and Girl Scout Cookies. Sweet vanilla/cake-like aroma with earthy tones.",
-      stats: { thc: 4, flavor: 4, chill: 5 },
-      imageurl: "https://images.unsplash.com/photo-1603909223429-69bb7101f420?auto=format&fit=crop&q=80&w=800" 
-    },
-    { 
-      id: 4, 
-      name: "Rochester Runtz", 
-      price: 55, 
-      category: "Hybrid", 
-      description: "Cross of Zkittlez and Gelato. Candy-like fruity/tropical berry flavors with colorful buds. Strong, balanced euphoric high.",
-      stats: { thc: 5, flavor: 5, chill: 4 },
-      imageurl: "https://images.unsplash.com/photo-1590682751946-a65099676151?auto=format&fit=crop&q=80&w=800" 
-    },
-    { 
-      id: 5, 
-      name: "OG Kush", 
-      price: 40, 
-      category: "Indica Hybrid", 
-      description: "Legendary strain with earthy, pine, and lemon-fuel notes. Classic relaxing body effects paired with some cerebral euphoria.",
-      stats: { thc: 4, flavor: 3, chill: 5 },
-      imageurl: "https://images.unsplash.com/photo-1589141986943-5578615fdef2?auto=format&fit=crop&q=80&w=800" // Reusing URL as requested
-    },
-  ];
 
   return (
     <div className="bg-white min-h-screen pt-20">
@@ -71,7 +24,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/wholesale" className="w-full max-w-[275px] sm:w-auto bg-brand text-white px-8 py-4 rounded-2xl text-sm font-bold uppercase tracking-widest hover:bg-brand/90 transition-all shadow-xl shadow-brand/20 hover:scale-[1.02] active:scale-[0.98]">
-              Wholesale Pricing
+              Wholesale Orders
             </Link>
             {/* Optional: Secondary "Visit Store" button for housewives/locals */}
             <Link href="/visit" className="w-full max-w-[275px] sm:w-auto bg-text-main/5 text-text-main px-8 py-4 rounded-2xl text-sm font-bold uppercase tracking-widest hover:bg-text-main/10 transition-all">
@@ -93,10 +46,22 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Grid - Sliced to show only first 4 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((p) => (
+          {products.slice(0, 4).map((p) => (
             <ProductCard key={p.id} {...p} />
           ))}
+        </div>
+
+        {/* Button to Full Menu */}
+        <div className="flex justify-center mt-8">
+          <Link 
+            href="/menu" 
+            className="group flex items-center gap-2 px-8 py-3 border border-brand text-brand font-black uppercase tracking-[0.2em] text-[10px] rounded-xl hover:bg-brand hover:text-white transition-all"
+          >
+            View Full Menu
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </div>
       </section>
     </div>

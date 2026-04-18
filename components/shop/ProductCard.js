@@ -1,35 +1,37 @@
+import Link from 'next/link';
 import FireIcon from '@/components/icons/FireIcon';
 
 export default function ProductCard({ name, price, category, imageurl, isNew, description, stats = { thc: 0, flavor: 0, chill: 0 } }) {
   
+  // Create slug for routing
+  const slug = name.toLowerCase().replace(/\s+/g, '-');
+
   const FireRating = ({ value, label }) => (
-  <div className="flex flex-col items-center gap-1.5 p-2 bg-secondary/5 rounded-xl border border-secondary/10 w-full">
-    {/* Label: Small and clean */}
-    <span className="text-[8px] font-black uppercase tracking-[0.2em] text-secondary/70 leading-none">
-      {label}
-    </span>
-    
-    {/* Icons: Solid colors, no glow */}
-    <div className="flex gap-0.5 items-center justify-center">
-      {[...Array(value)].map((_, i) => {
-        const isActive = i < value;
-        return (
-          <FireIcon 
-            key={i} 
-            className={`w-2.5 h-2.5 transition-colors duration-200 ${
-              isActive 
-                ? 'text-secondary'           // Solid Brand Orange
-                : 'text-brand/20'        // Very faint orange for placeholders
-            }`} 
-          />
-        );
-      })}
+    <div className="flex flex-col items-center gap-1.5 p-2 bg-secondary/5 rounded-xl border border-secondary/10 w-full">
+      <span className="text-[8px] font-black uppercase tracking-[0.2em] text-secondary/70 leading-none">
+        {label}
+      </span>
+      <div className="flex gap-0.5 items-center justify-center">
+        {[...Array(value)].map((_, i) => {
+          const isActive = i < value;
+          return (
+            <FireIcon 
+              key={i} 
+              className={`w-2.5 h-2.5 transition-colors duration-200 ${
+                isActive ? 'text-secondary' : 'text-brand/20'
+              }`} 
+            />
+          );
+        })}
+      </div>
     </div>
-  </div>
-);
+  );
 
   return (
-    <div className="group bg-bg border border-border shadow-sm rounded-3xl p-2 transition-all hover:shadow-xl hover:-translate-y-1 max-w-[280px] w-full mx-auto relative">
+    <Link 
+      href={`/product/${slug}`} 
+      className="group block bg-bg border border-border shadow-sm rounded-3xl p-2 transition-all hover:shadow-xl hover:-translate-y-1 max-w-[280px] w-full mx-auto relative"
+    >
       {/* Image Section */}
       <div className="aspect-square bg-surface rounded-2xl relative overflow-hidden">
         <img 
@@ -75,6 +77,6 @@ export default function ProductCard({ name, price, category, imageurl, isNew, de
           <FireRating value={stats.chill} label="Chill" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
