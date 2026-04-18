@@ -60,7 +60,7 @@ export default function ProductCard({ name, price, category, imageurl, isNew, de
             {name}
           </h3>
           <div className="flex flex-col items-end shrink-0">
-            <span className="font-mono font-bold text-secondary text-sm">${price}</span>
+            <span className="font-mono font-bold text-brand text-sm">${price}</span>
             <span className="text-[8px] font-bold text-text-muted uppercase tracking-tighter">1/8 oz</span>
           </div>
         </div>

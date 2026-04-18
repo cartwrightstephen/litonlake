@@ -75,11 +75,11 @@ export default async function ProductPage({ params }) {
             {product.name}
           </h1>
 
-          <p className="w-fit my-2 px-3 py-1.5 rounded-md border border-secondary/20 bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.2em]">
+          <p className="w-fit my-1 px-3 py-1.5 rounded-md border border-brand/20 bg-brand/10 text-brand text-xs md:text-base font-black font-mono uppercase tracking-[0.1em]">
             ${product.price.toFixed(2)} Per Eighth
           </p>
           
-          <p className="text-text-muted text-sm md:text-lg leading-relaxed mb-8">
+          <p className="text-text-muted text-sm md:text-lg leading-relaxed mt-1 mb-8">
             {product.description}
           </p>
 
