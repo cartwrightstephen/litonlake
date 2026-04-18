@@ -3,16 +3,23 @@ import Link from 'next/link';
 import { Sparkles } from 'lucide-react';
 import { products } from '@/data/products';
 
+export const metadata = {
+  title: 'Lit on Lake | Rochester Hand Crafted Cannabis',
+  description: 'Discover hand perfected cannabis from Lit on Lake. Locally grown in Rochester, our premium selection offers unmatched quality and flavor.',
+  keywords: [
+    'Lit on Lake', 
+    'Hand Perfected Cannabis', 
+    'Rochester Cannabis', 
+    'Wholesale Cannabis', 
+    'Craft Cannabis'
+  ],
+  authors: [{ name: 'Lit on Lake' }],
+};
+
 export default function Home() {
 
   return (
     <div className="bg-white min-h-screen pt-20">
-      <head>
-        <title>Lit on Lake | Rochester Hand Crafted Cannabis</title>
-        <meta name="description" content="Discover hand perfected cannabis from Lit on Lake. Locally grown in Rochester, our premium selection offers unmatched quality and flavor." />
-        <meta name="keywords" content="Lit on Lake, Hand Perfected Cannabis, Rochester Cannabis, Wholesale Cannabis, Craft Cannabis" />
-        <meta name="author" content="Lit on Lake" />
-      </head>
       <section className="pt-8 pb-8 px-6 text-center bg-bg">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">

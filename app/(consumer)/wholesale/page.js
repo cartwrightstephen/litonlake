@@ -1,18 +1,28 @@
 import { Phone, ShieldCheck, Users, Truck } from 'lucide-react';
 
+export const metadata = {
+  title: 'Lit on Lake | Wholesale Partnerships - Premium Rochester Cannabis',
+  description: 'Partner with Lit on Lake for premium, hand-perfected craft cannabis in Rochester, NY. Providing consistent, licensed, and high-quality flower for New York State retail dispensaries.',
+  keywords: [
+    'Lit on Lake', 
+    'Wholesale Cannabis', 
+    'Rochester Cannabis', 
+    'Licensed Cannabis Partner', 
+    'Premium Craft Cannabis', 
+    'NYS Wholesale', 
+    'Cannabis Distribution'
+  ],
+  authors: [{ name: 'Lit on Lake' }],
+  openGraph: {
+    title: 'Lit on Lake | Wholesale Partnerships',
+    description: 'Premium, hand-perfected craft cannabis for NYS retail partners.',
+    type: 'website',
+  },
+};
+
 export default function WholesalePage() {
   return (
     <div className="pt-24 pb-24 px-6 max-w-4xl mx-auto">
-      <head>
-        <title>Lit on Lake | Wholesale Partnerships - Premium Rochester Cannabis</title>
-        <meta name="description" content="Partner with Lit on Lake for premium, hand-perfected craft cannabis in Rochester, NY. Providing consistent, licensed, and high-quality flower for New York State retail dispensaries." />
-        <meta name="keywords" content="Lit on Lake, Wholesale Cannabis, Rochester Cannabis, Licensed Cannabis Partner, Premium Craft Cannabis, NYS Wholesale, Cannabis Distribution" />
-        <meta name="author" content="Lit on Lake" />
-
-        <meta property="og:title" content="Lit on Lake | Wholesale Partnerships" />
-        <meta property="og:description" content="Premium, hand-perfected craft cannabis for NYS retail partners." />
-        <meta property="og:type" content="website" />
-      </head>
       {/* Hero Header */}
       <div className="text-center mb-8 md:mb-12">
         <h1 className="text-4xl md:text-6xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">

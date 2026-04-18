@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import FireIcon from '@/components/icons/FireIcon';
+import BrandLogo from '@/components/ui/BrandLogo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,24 +17,7 @@ export default function Navbar() {
         {/* Logo - Integrated Flame "I" */}
         <Link href="/" className="flex items-center group">
           <div className="flex flex-col leading-none">
-            <div className="flex items-end">
-              {/* The letter L */}
-              <span className="text-[14px] font-black tracking-tighter text-text-main uppercase">L</span>
-              
-              {/* The Integrated "I" and Flame */}
-              <div className="relative flex flex-col items-center px-[0.5px] -mx-[1px]">
-                {/* Your FireIcon sitting between L and T */}
-                <FireIcon className="w-3 h-3 text-brand mb-[-1px] relative z-10" />
-                {/* A shorter, custom-height "I" to act as the base/stem */}
-                <div className="w-[3px] h-[7px] bg-text-main rounded-sm mb-[2px]"></div>
-              </div>
-
-              {/* The letter T */}
-              <span className="text-[14px] font-black tracking-tighter text-text-main uppercase">T</span>
-              
-              {/* ON LAKE */}
-              <span className="ml-2 text-[14px] font-black tracking-[0.15em] text-text-main/80 uppercase">ON LAKE</span>
-            </div>
+            <BrandLogo />
             
             {/* Sub-tag anchored to the right side of the main text */}
             <span className="text-[8px] font-bold text-brand tracking-[0.4em] uppercase opacity-70 mt-1">

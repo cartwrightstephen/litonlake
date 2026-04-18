@@ -1,8 +1,10 @@
+export const metadata = {
+  title: "Lit on Lake | Compliance"
+}
+
 export default function CompliancePage() {
   return (
     <div className="pt-24 pb-24 px-6 max-w-3xl mx-auto">
-      <head><title>Lit on Lake | Compliance</title></head>
-
       <h1 className="text-4xl md:text-6xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">
         Compliance.
       </h1>

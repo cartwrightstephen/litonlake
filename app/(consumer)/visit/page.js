@@ -1,12 +1,12 @@
 import { MapPin, Clock, Navigation } from 'lucide-react';
 
+export const metadata = {
+  title: "Lit on Lake | Visit Our Store"
+}
+
 export default function VisitPage() {
   return (
     <div className="pt-24 pb-24 px-6 max-w-5xl mx-auto">
-      <head>
-        <title>Lit on Lake | Visit Our Store</title>
-      </head>
-
       <div className="text-center mb-8 md:mb-12">
         <h1 className="text-4xl md:text-6xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">
           Visit

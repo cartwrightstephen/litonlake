@@ -1,14 +1,13 @@
 import ProductCard from '@/components/shop/ProductCard';
 import { products } from '@/data/products';
 
+export const metadata = {
+  title: "Lit on Lake | The Menu - Hand Perfected Cannabis"
+}
+
 export default function MenuPage() {
   return (
     <div className="pt-24 pb-24 px-6 max-w-7xl mx-auto">
-      <head>
-        <title>Lit on Lake | The Menu - Hand Perfected Cannabis</title>
-        <meta name="description" content="Explore our curated menu of hand-perfected craft cannabis from Rochester, NY." />
-      </head>
-
       <div className="mb-8 md:md-12 text-center">
         <h1 className="text-4xl md:text-6xl font-black text-text-main tracking-tighter mb-4 leading-[0.9]">
           The

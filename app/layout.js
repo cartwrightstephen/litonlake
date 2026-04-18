@@ -7,6 +7,14 @@ const geistSans = Geist({
   display: "swap"
 });
 
+export const metadata = {
+  title: 'Lit on Lake',
+  description: 'Rochester hand perfected cannabis.',
+  icons: {
+    icon: '/icon.svg',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable}`}>
