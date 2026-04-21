@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import BrandTag from '@/components/ui/BrandTag';
 
 export const metadata = {
   title: 'Lit on Lake | Contact',
@@ -33,7 +34,7 @@ export default function ContactPage() {
         Get
         <span className="text-brand"> in touch.</span>
       </h1>
-      <p className="text-text-muted mb-12">Have a question or want to learn more? Our team is here to help.</p>
+      <p className="text-text-muted mb-12">Have a question or want to learn more? The <BrandTag /> team is here to help.</p>
       
       <div className="grid gap-4">
         {contactLinks.map((item) => (

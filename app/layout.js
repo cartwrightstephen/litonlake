@@ -11,7 +11,7 @@ export const metadata = {
   title: 'Lit on Lake',
   description: 'Rochester hand perfected cannabis.',
   icons: {
-    icon: '/icon.svg',
+    icon: '/icon.ico',
   },
 };
 

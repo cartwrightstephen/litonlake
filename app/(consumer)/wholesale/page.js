@@ -1,3 +1,4 @@
+import BrandTag from '@/components/ui/BrandTag';
 import { Phone, ShieldCheck, Users, Truck } from 'lucide-react';
 
 export const metadata = {

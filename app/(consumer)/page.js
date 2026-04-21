@@ -2,6 +2,7 @@ import ProductCard from '@/components/shop/ProductCard';
 import Link from 'next/link';
 import { Sparkles } from 'lucide-react';
 import { products } from '@/data/products';
+import BrandTag from '@/components/ui/BrandTag';
 
 export const metadata = {
   title: 'Lit on Lake | Rochester Hand Crafted Cannabis',
@@ -27,7 +28,7 @@ export default function Home() {
             <span className="text-brand">Hand perfected.</span>
           </h1>
           <p className="text-text-muted text-sm md:text-base font-medium mb-8 max-w-[500px] mx-auto leading-relaxed">
-            From wholesalers to housewives, the <span className='brand-tag'>LIT</span> service team is fully licensed to provide hand crafted cannabis rooted in Rochester soil.
+            From wholesalers to housewives, the <BrandTag /> service team is fully licensed to provide hand crafted cannabis rooted in Rochester soil.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/wholesale" className="w-full max-w-[275px] sm:w-auto bg-brand text-white px-8 py-4 rounded-2xl text-sm font-bold uppercase tracking-widest hover:bg-brand/90 transition-all shadow-xl shadow-brand/20 hover:scale-[1.02] active:scale-[0.98]">

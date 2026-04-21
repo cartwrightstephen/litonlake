@@ -18,11 +18,6 @@ export default function Navbar() {
         <Link href="/" className="flex items-center group">
           <div className="flex flex-col leading-none">
             <BrandLogo />
-            
-            {/* Sub-tag anchored to the right side of the main text */}
-            <span className="text-[8px] font-bold text-brand tracking-[0.4em] uppercase opacity-70 mt-1">
-              Hand Perfected
-            </span>
           </div>
         </Link>
         

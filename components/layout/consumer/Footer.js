@@ -14,10 +14,6 @@ export default function Footer() {
           <div className="flex flex-col items-start space-y-4">
             <Link href="/" className="flex flex-col leading-none group">
               <BrandLogo />
-              {/* Sub-tag anchored to the right side of the main text */}
-              <span className="text-[8px] font-bold text-brand tracking-[0.4em] uppercase opacity-70 mt-1">
-                Hand Perfected
-              </span>
             </Link>
             <p className="text-text-muted text-[12px] leading-relaxed max-w-[260px]">
               Rooted in Rochester soil. Providing hand-perfected craft cannabis for our local community and wholesale partners.
