@@ -46,6 +46,9 @@ export default function Footer() {
           <p className="text-[9px] font-bold text-text-muted/60 uppercase tracking-[0.2em]">
             © 2026 LIT ON LAKE — ROCHESTER, NY
           </p>
+          <p className="text-[9px] font-bold text-text-muted/60 uppercase tracking-[0.2em]">
+            NYS License: OCM-MICR-24-000103
+          </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-[9px] font-bold text-text-muted/60 uppercase tracking-[0.2em] hover:text-text-main transition-colors">
               Privacy

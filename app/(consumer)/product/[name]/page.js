@@ -7,9 +7,9 @@ import FireIcon from '@/components/icons/FireIcon';
 export async function generateMetadata({ params }) {
   const { name } = await params;
   const productName = name
-    .split('-') // ["lake", "blue", "dream"]
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // ["Lake", "Blue", "Dream"]
-    .join(' '); // "Lake Blue Dream"
+    .split('-') 
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+    .join(' '); 
   return { title: `${productName} | Lit on Lake` };
 }
 
@@ -27,7 +27,7 @@ export default async function ProductPage({ params }) {
 
   const FireRating = ({ value, label }) => (
     <div className="flex flex-col items-center gap-1.5 p-3 bg-secondary/5 rounded-xl border border-secondary/10 w-full">
-      <span className="text-[8px] font-black uppercase tracking-[0.2em] text-secondary/70">{label}</span>
+      <span className="text-[9px] font-black uppercase tracking-[0.2em] text-secondary/70">{label}</span>
       <div className="flex gap-0.5">
         {[...Array(value)].map((_, i) => (
           <FireIcon key={i} className={`w-3 h-3 ${i < value ? 'text-secondary' : 'text-brand/20'}`} />
@@ -71,13 +71,11 @@ export default async function ProductPage({ params }) {
             </span>
           </div>
 
-          {/* Container: Flex wrap ensures it handles long product names on mobile */}
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <h1 className="text-3xl md:text-5xl font-black text-text-main tracking-tighter leading-tight">
               {product.name}
             </h1>
             
-            {/* The Badge: Subtle, small, and right next to the title */}
             <div className="flex items-baseline gap-1 px-2 py-0.5 rounded border text-sm md:text-base border-secondary/20 bg-secondary/5">
               <span className="font-mono font-semibold text-secondary tabular-nums">
                 ${product.price.toFixed(2)} per 1/8 oz
@@ -89,11 +87,51 @@ export default async function ProductPage({ params }) {
             {product.description}
           </p>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-3 gap-3 mb-12">
-             <FireRating value={product.stats.thc} label="Power" />
-             <FireRating value={product.stats.flavor} label="Flavor" />
-             <FireRating value={product.stats.chill} label="Chill" />
+          {/* Stats Section & Balance Visualizer */}
+          <div className="mb-12">
+            {/* Power / Flavor / Chill Grid */}
+            <div className="grid grid-cols-3 gap-3 mb-4">
+              <FireRating value={product.stats.thc} label="Power" />
+              <FireRating value={product.stats.flavor} label="Flavor" />
+              <FireRating value={product.stats.chill} label="Chill" />
+            </div>
+
+            {/* Strain Balance Card */}
+            <div className="bg-secondary/5 rounded-xl border border-secondary/10 p-4">
+              <div className="text-[9px] font-black uppercase tracking-[0.2em] text-secondary/70 mb-4 text-center">
+                Strain Balance
+              </div>
+              
+              <div className="flex flex-col gap-4">
+                {/* Sativa Bar */}
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex justify-between items-center text-[10px] font-bold text-secondary">
+                    <span>Sativa</span>
+                    <span>{product.sativa}%</span>
+                  </div>
+                  <div className="h-2 w-full bg-secondary/10 rounded-full overflow-hidden">
+                    <div 
+                      style={{ width: `${product.sativa}%` }} 
+                      className="h-full bg-secondary shadow-[0_0_10px_rgba(249,115,22,0.4)]" 
+                    />
+                  </div>
+                </div>
+
+                {/* Indica Bar */}
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex justify-between items-center text-[10px] font-bold text-brand">
+                    <span>Indica</span>
+                    <span>{product.indica}%</span>
+                  </div>
+                  <div className="h-2 w-full bg-brand/10 rounded-full overflow-hidden">
+                    <div 
+                      style={{ width: `${product.indica}%` }} 
+                      className="h-full bg-brand shadow-[0_0_10px_rgba(var(--brand-rgb,16,185,129),0.4)]" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="flex gap-4">
