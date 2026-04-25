@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           {/* Right: Navigation Links */}
-          <div className="grid grid-cols-2 gap-12 md:gap-24">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-20">
             <div className="flex flex-col space-y-4">
               <h4 className="text-[9px] font-bold uppercase tracking-[0.2em] text-text-main">Explore</h4>
               <ul className="flex flex-col space-y-2 text-[12px] font-medium text-text-muted">
@@ -30,6 +30,14 @@ export default function Footer() {
                 <li><Link href="/visit" className="hover:text-brand transition-colors">Visit Store</Link></li>
               </ul>
             </div>
+            
+            <div className="flex flex-col space-y-4">
+              <h4 className="text-[9px] font-bold uppercase tracking-[0.2em] text-text-main">Company</h4>
+              <ul className="flex flex-col space-y-2 text-[12px] font-medium text-text-muted">
+                <li><Link href="/our-story" className="hover:text-brand transition-colors">Our Story</Link></li>
+              </ul>
+            </div>
+
             <div className="flex flex-col space-y-4">
               <h4 className="text-[9px] font-bold uppercase tracking-[0.2em] text-text-main">Support</h4>
               <ul className="flex flex-col space-y-2 text-[12px] font-medium text-text-muted">

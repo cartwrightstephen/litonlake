@@ -23,11 +23,13 @@
   /* Font stacks */
   .brand-tag {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    @apply px-1 pt-[5px] pb-[1px]
-          text-[0.8em] font-extrabold 
+    font-size: 13px;
+
+    @apply px-1 py-[2px]
+          font-extrabold 
           tracking-normal
           bg-secondary-muted border border-secondary/20 
           text-secondary rounded-md
-          inline-flex items-center align-baseline;
+          inline-flex items-center;
   }
 }

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import FireIcon from '@/components/icons/FireIcon';
 
-export default function ProductCard({ name, price, category, imageurl, isNew, description, stats = { thc: 0, flavor: 0, chill: 0 } }) {
+export default function ProductCard({ name, price, category, imageurl, isPopular, description, stats = { thc: 0, flavor: 0, chill: 0 } }) {
   
   // Create slug for routing
   const slug = name.toLowerCase().replace(/\s+/g, '-');
@@ -42,13 +42,13 @@ export default function ProductCard({ name, price, category, imageurl, isNew, de
         <div className="absolute top-3 left-3 bg-secondary-muted/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest text-secondary z-10">
           {category}
         </div>
-        {isNew && (
+        {isPopular && (
           <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1.5 z-10 border border-border">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-secondary"></span>
             </span>
-            <span className="text-[8px] font-black uppercase text-text-main">New</span>
+            <span className="text-[8px] font-black uppercase text-text-main">Popular</span>
           </div>
         )}
       </div>

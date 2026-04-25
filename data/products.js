@@ -6,6 +6,7 @@ export const products = [
     category: "Hybrid",
     indica: 70,
     sativa: 30,
+    isPopular: true,
     description: "Mental mood boost followed by a sedating and fully relaxing body high.",
     stats: { thc: 4, flavor: 4, chill: 5 },
     imageurl: "https://res.cloudinary.com/dxqwmnjsq/image/upload/v1776907273/Lit%20on%20Lake/d808d2cb-c018-4fd3-a881-683b524dcf5d_pm1ek7.jpg"
